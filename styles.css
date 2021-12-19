@@ -1,0 +1,315 @@
+body{
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+.image-full{
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 2em;
+}
+
+/* Typografia */
+
+h1,
+h2,
+h3{
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: black;
+  margin-top: 0;
+}
+
+h1{
+  font-size: 2rem;
+  margin: 0;
+}
+
+h3 {
+  color: #303030;
+}
+
+a{
+  color: #303030;
+}
+
+a:hover,
+a:focus {
+  color: #143774;
+}
+
+strong{
+  font-weight: 700;
+}
+
+.subtitle{
+  font-weight: 700;
+  color: #303030;
+  font-size: .75rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.article-title{
+  font-size: 1.5rem;
+}
+
+.article-featured .article-title, .article-title{
+  margin-bottom: 0em;
+}
+
+.article-read-more,
+.article-info{
+  font-size: .875rem;
+}
+
+.article-read-more{
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.article-read-more:hover,
+.article-read-more:focus{
+  color: #303030;
+  text-decoration: underline;
+}
+
+.article-info{
+  margin: 1em 0 2em 0;
+}
+
+/* Layout */
+
+.container{
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.container-flex{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+header{
+  background: #f8f8f8;
+  padding: 2.5em 0 2.5em 0;
+  text-align: center;
+  background-color: #DCDCDC;
+}
+
+footer{
+  background:	#DCDCDC;
+  color: rgba(0, 0, 0, .80);
+  text-align: center;
+  padding: 3em;
+}
+
+@media (min-width: 650px){
+  nav a{
+    padding: 0.3em 0;
+  }
+
+  .container-flex {
+    flex-direction: row;
+  }
+
+  main{
+    width: 70%;
+  }
+  aside{
+    width: 25%;
+    min-width: 200px;
+    margin-left: 1em;
+  }
+}
+
+/* nav */
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li{
+  margin-left: 2em;
+  white-space: nowrap;
+}
+
+nav a{
+  text-decoration: none;
+  color: #707070;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+nav a:hover,
+nav a:focus{
+  color: black;
+}
+
+.current-page{
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.current-page:hover{
+  color: #707070;
+}
+
+@media (max-width: 650px){
+  nav ul{
+    flex-direction: column;
+  }
+
+  nav li{
+    margin: .5em 0;
+  }
+}
+
+/* artykuły */
+
+.article-featured{
+  border-bottom: #696969 1px solid;
+  padding-bottom: 2em;
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+
+.article-recent{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.article-recent:first-child{
+  margin-top: 2em;
+}
+
+.article-image, .widget-image{
+  max-height: 250px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5em
+}
+
+.article-recent-main{
+  order: 2;
+}
+
+.article-recent-secondary{
+  order: 1;
+}
+
+@media (min-width: 650px){
+  .article-recent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .article-recent-main{
+      width: 67%;
+    }
+
+    .article-read-more{
+      width: fit-content;
+    }
+
+    .article-recent-secondary{
+      width: 30%;
+    }
+
+    .article-featured{
+      display: flex;
+      flex-direction: column;
+      margin-top: 0;
+    }
+
+    .image-full{
+      order: -2;
+    }
+
+    .article-image{
+      order: -2;
+      min-height: 250px;
+      object-fit: cover;
+    }
+
+    .article-info{
+      order: -1;
+    }
+}
+
+/* widgety */
+
+.sidebar{
+  /* background-color: #DCDCDC; */
+}
+
+@media (min-width: 650px){
+  .sidebar-widget{
+    border: 20px solid #DCDCDC;
+    margin-bottom: 2em;
+    padding: 1em;
+    margin-top: 2em;
+  }
+  .widget-image{
+      width: 100%;
+      max-height: 125px;
+  }
+  /* .sidebar-widget:first-child{
+    border-top: 0px;
+  } */
+}
+
+.widget-body{
+  color: #3B3C35;
+  font-size: 1em;
+}
+
+.widget-title,
+.widget-recent-post-title{
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.widget-title{
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+
+.widget-recent-post{
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #DCDCDC;
+  margin-bottom: 1em;
+}
+
+.widget-recent-post:last-child{
+  border: 0;
+  margin: 0;
+}
+
+.widget-image{
+  order: -1;
+}
